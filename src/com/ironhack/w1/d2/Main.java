@@ -136,4 +136,12 @@ public class Main {
 
         return subjects;
     }
+
+    public static String getCountry(int index){
+        List<String> countries = new ArrayList<>();
+        countries.add("USA");
+        countries.add("Spain");
+
+        return countries.get(index);
+    }
 }

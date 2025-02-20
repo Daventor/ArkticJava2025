@@ -59,5 +59,16 @@ public class Main {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
         }
+
+        System.out.println(sumNumbers("dummyText", 1,2,3,4,5,6));
+    }
+
+    public static int sumNumbers(String name, int... numbers){
+        int result = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            result += numbers[i];
+        }
+
+        return result;
     }
 }

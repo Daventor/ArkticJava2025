@@ -1,6 +1,8 @@
 package com.ironhack.w2.d3;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -63,11 +65,15 @@ public class Main {
         System.out.println(sumNumbers("dummyText", 1,2,3,4,5,6));
     }
 
-    public static int sumNumbers(String name, int... numbers){
+    public static int sumNumbers(String name, int... numbers) {
         int result = 0;
         for (int i = 0; i < numbers.length; i++) {
             result += numbers[i];
         }
+
+        List myList = new ArrayList<>();
+
+        myList.se
 
         return result;
     }

@@ -1,6 +1,9 @@
-package com.ironhack.w3d2.model;
+package com.ironhack.w3d3.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 //@Table(name = "Teacher")
@@ -43,3 +46,4 @@ public class Teacher {
                 '}';
     }
 }
+

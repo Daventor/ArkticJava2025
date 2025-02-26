@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ironhack</groupId>
-	<artifactId>w3d2</artifactId>
+	<artifactId>w3d3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>w3d2</name>
+	<name>w3d3</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

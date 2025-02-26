@@ -1,4 +1,4 @@
-package com.ironhack.w3d2.model;
+package com.ironhack.w3d3.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

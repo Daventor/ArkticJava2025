@@ -1,6 +1,8 @@
-package com.ironhack.w3d3.model;
+package com.ironahck.w3d4.model;
 
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Student {
@@ -9,6 +11,14 @@ public class Student {
     private Integer id;
     private Integer grade;
     private String name;
+
+//    @ManyToMany
+//    @JoinTable(
+//            name = "student_course",
+//            joinColumns = @JoinColumn(name = "student_id"),
+//            inverseJoinColumns = @JoinColumn(name = "course_id")
+//    )
+//    List<Course> courses;
 
     @Embedded
     @AttributeOverrides({

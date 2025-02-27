@@ -1,6 +1,7 @@
-package com.ironhack.w3d3.repository;
+package com.ironahck.w3d4.repository;
 
-import com.ironhack.w3d3.model.Teacher;
+import com.ironahck.w3d4.model.Address;
+import com.ironahck.w3d4.model.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,8 +17,16 @@ class TeacherRepositoryTest {
     @Autowired
     TeacherRepository teacherRepository;
 
+    @Autowired
+    AddressRepository addressRepository;
+
     @Test
     public void findAll_teachers_teacherList(){
+        Address address = new Address("Fake Street", "123");
+        addressRepository.save(address);
+        Teacher teacher = new Teacher("John Doe", address);
+        teacherRepository.save(teacher);
+
         List<Teacher> teacherList = teacherRepository.findAll();
         System.out.println(teacherList);
 

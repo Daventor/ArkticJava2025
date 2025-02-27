@@ -1,6 +1,6 @@
-package com.ironhack.w3d3.repository;
+package com.ironahck.w3d4.repository;
 
-import com.ironhack.w3d3.model.Teacher;
+import com.ironahck.w3d4.model.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

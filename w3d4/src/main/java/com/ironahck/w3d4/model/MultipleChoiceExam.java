@@ -1,4 +1,4 @@
-package com.ironhack.w3d3.model;
+package com.ironahck.w3d4.model;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;

@@ -8,10 +8,10 @@
 		<version>3.3.9</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ironhack</groupId>
-	<artifactId>w3d3</artifactId>
+	<groupId>com.ironahck</groupId>
+	<artifactId>w3d4</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>w3d3</name>
+	<name>w3d4</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

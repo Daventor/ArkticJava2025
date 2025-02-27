@@ -1,6 +1,9 @@
-package com.ironhack.w3d3.repository;
+package com.ironahck.w3d4.repository;
 
-import com.ironhack.w3d3.model.Course;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.ironahck.w3d4.model.Course;
+import com.ironahck.w3d4.model.Teacher;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,10 +20,17 @@ class CourseRepositoryTest {
     @Autowired
     CourseRepository courseRepository;
 
+    @Autowired
+    TeacherRepository teacherRepository;
+
     @BeforeEach
     public void setUp(){
-        Course algebra = new Course("Algebra", 150, "B1", "3 weeks", 2);
-        courseRepository.save(algebra);
+        Optional<Teacher> teacherOptional = teacherRepository.findById(1);
+
+        if(teacherOptional.isPresent()) {
+            Course algebra = new Course("Algebra", 150, "B1", "3 weeks", teacherOptional.get());
+            courseRepository.save(algebra);
+        }
     }
 
     @AfterEach

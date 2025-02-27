@@ -1,6 +1,6 @@
-package com.ironhack.w3d3.repository;
+package com.ironahck.w3d4.repository;
 
-import com.ironhack.w3d3.model.Course;
+import com.ironahck.w3d4.model.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface CourseRepository extends JpaRepository<Course, String> {
 
-//  JPA QUERY KEYWORDS
+    //  JPA QUERY KEYWORDS
     Optional<Course> findByHours(Integer hours);
     List<Course> findAllByClassroom(String classroom);
     List<Course> findAllByCourseContaining(String str);
@@ -28,8 +28,8 @@ public interface CourseRepository extends JpaRepository<Course, String> {
 
     @Query("SELECT c FROM Course c WHERE c.classroom = :classroomParam AND c.hours <= :hoursParam")
     List<Course> findAllWhereClassroomAndHoursNamedParams(
-        @Param("classroomParam") String classroom,
-        @Param("hoursParam") Integer hours
+            @Param("classroomParam") String classroom,
+            @Param("hoursParam") Integer hours
     );
 
     @Query("SELECT SUM(c.hours) FROM Course c")

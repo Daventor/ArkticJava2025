@@ -1,9 +1,9 @@
-package com.ironahck.w3d4.repository;
+package com.ironhack.w4d1.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.ironahck.w3d4.model.Course;
-import com.ironahck.w3d4.model.Teacher;
+import com.ironhack.w4d1.model.Course;
+import com.ironhack.w4d1.model.Teacher;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

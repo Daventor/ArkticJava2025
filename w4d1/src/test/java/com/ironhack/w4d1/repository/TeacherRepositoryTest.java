@@ -1,7 +1,9 @@
-package com.ironahck.w3d4.repository;
+package com.ironhack.w4d1.repository;
 
-import com.ironahck.w3d4.model.Address;
-import com.ironahck.w3d4.model.Teacher;
+import static org.junit.jupiter.api.Assertions.*;
+
+import com.ironhack.w4d1.model.Address;
+import com.ironhack.w4d1.model.Teacher;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

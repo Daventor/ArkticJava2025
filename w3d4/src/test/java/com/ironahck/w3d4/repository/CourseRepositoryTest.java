@@ -10,8 +10,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -159,5 +164,31 @@ class CourseRepositoryTest {
         List<Course> courseList = courseRepository.nativeFindAllWhereClassroomAndHoursNamedParams("B1", 150);
         System.out.println(courseList);
         assertEquals(3, courseList.size());
+    }
+
+    @Test
+    void testInput(){
+        InputStream oldInputStream = System.in;
+
+        System.setIn(new ByteArrayInputStream("This is a test\nThis is another test\n".getBytes()));
+        Scanner scanner = new Scanner(System.in);
+
+        String myInputString = scanner.nextLine();
+        String myOtherString = scanner.nextLine();
+
+        assertEquals("This is a test", myInputString);
+        assertEquals("This is another test", myOtherString);
+
+        System.setIn(oldInputStream);
+    }
+
+    @Test
+    void testOutput(){
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        System.out.print("This is a test");
+
+        assertEquals("This is a test", out.toString());
     }
 }

@@ -11,4 +11,11 @@ public class CourseHoursDTO {
     public Integer getHours() {
         return hours;
     }
+
+    public CourseHoursDTO() {
+    }
+
+    public CourseHoursDTO(Integer hours) {
+        this.hours = hours;
+    }
 }

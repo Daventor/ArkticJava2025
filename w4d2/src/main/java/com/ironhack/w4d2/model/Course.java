@@ -23,7 +23,7 @@ public class Course {
     @Min(30)
     private Integer hours;
     @NotEmpty
-//    @OnlyLetters
+    //@OnlyLetters
     private String classroom;
     private String vacations;
 

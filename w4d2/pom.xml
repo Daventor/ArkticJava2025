@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>com.ironhack</groupId>
 	<artifactId>w4d2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
+	<packaging>jar</packaging>
 	<name>w4d2</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -93,6 +94,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<excludes>
 						<exclude>
